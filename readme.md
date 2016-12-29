@@ -10,4 +10,5 @@ This version contain dockerfile to build it's own images
 	docker run -d balin/cron 
 
 ## Working directory
-1. To copy balin working directory (laravel project) please change folder location at Dockerfile line 21
+1.  change laravel folder for balin api (Dockerfile line 43)
+2.	change .env path (Dockerfile line 46)

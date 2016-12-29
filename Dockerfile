@@ -29,12 +29,15 @@ ADD crontab /etc/cron.d/balin-cron
  
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/balin-cron
- 
+
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
  
 # Run the command on container startup
 CMD cron && tail -f /var/log/cron.log
+
+# Local time configuration
+RUN cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Copy resource to working directory
 ADD ./src/ /var/www/html/
