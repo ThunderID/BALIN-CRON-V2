@@ -40,7 +40,7 @@ CMD cron && tail -f /var/log/cron.log
 ADD ./src/ /var/www/html/
 
 # Copy .env file
-#ADD /media/chelsy/6C3EC7F72C149448/balin_use/BALIN-API-V2/src/.env /var/www/html/
+#ADD ./.env /var/www/html/
 
 # run composer install
 RUN cd /var/www/html && composer install && composer update
